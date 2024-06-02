@@ -43,6 +43,8 @@ export const loadSearchResults = async function (query) {
         image: recipe.image_url,
       };
     });
+    // whenever we call loadSearchResults we want to reset the page to 1
+    state.search.page = 1;
   } catch (err) {
     console.error(`${err} 🔥🔥🔥`);
     throw err;
